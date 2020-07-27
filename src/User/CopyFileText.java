@@ -10,7 +10,7 @@ public class CopyFileText {
         FileWriter output;
         Scanner sc = new Scanner(System.in);
         try {
-            original = new File("Data/trungdeptrai3.txt");
+            original = new File("Data/trungdeptrai.txt");
             if(!original.exists()){
                 System.out.println("Không có file đầu vào! Bạn có muốn tạo file mới?");
                 System.out.println("1.Tạo mới");
@@ -30,7 +30,7 @@ public class CopyFileText {
             output = new FileWriter("Data/Last.txt");
                 int line;
                 while ((line = reader.read() )!=-1) {
-                    if(line==13||line==10){
+                    if(line==13){
                         count--;
                     }
                     System.out.println(line);
